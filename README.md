@@ -3,7 +3,7 @@ Material de apoio
 
 # Material de apoio ao curso AWS | Técnicas Essenciais 🙂
 
-## Conceitos de BlockChain abordados 📚
+## Arquivos disponibilizados 📚
  
  - HeidiSQL_11.0_64_Portable.zip -> Client portable para acesso MYSQL
  - index.html -> Página HTML simples para teste do S3 como host
