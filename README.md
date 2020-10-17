@@ -1,6 +1,3 @@
-# apoio-curso-aws-tecnicas-essenciais
-Material de apoio
-
 # Material de apoio ao curso AWS | Técnicas Essenciais 🙂
 
 ## Arquivos disponibilizados 📚
