@@ -14,7 +14,7 @@
 ## Passo 1 - VPC:
 
 Criar nova VPC (public e private) vi wizard
-Após a criação da VPC teremos duas subnets. Criar uma terceira subnet, do tipo privada em uma zona disponibilidade diferente da primeira.
+Após a criação da VPC teremos duas subnets. Criar uma terceira subnet, do tipo privada em uma zona disponibilidade diferente da primeira. (Acabamos não usando a terceira VPC em decorrência de termos usado o template freetier no RDS, mas vale a dica de como criar uma subnet extra)
 
 Criar Security Group **"sg_aplicacao"** com regras abaixo:
 origem 0.0.0.0/0	 porta: 22
@@ -25,8 +25,6 @@ origem sg_aplicacao	 porta: 3306
 
 
 ## Passo 2 - RDS: 
-Criar subnet group com as duas subnets privadas
-Criar rds com subnet-group definido e vpc definida
 Associar DBInstance ao Security Group sg_db
 
 anotar url, user and pass
@@ -36,8 +34,8 @@ Criar maquina na subnet publica
 Associar máquina ao Security Group sg_aplicacao
 Acessar máquina e instalar aplicação seguindo os passos abaixo:
 
-- apt-get update
-- apt-get upgrade
+- sudo pt-get update
+- sudo apt-get upgrade
 
 - sudo apt install default-jdk
 - java -version
