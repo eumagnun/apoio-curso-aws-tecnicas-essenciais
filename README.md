@@ -1,6 +1,6 @@
 # Material de apoio ao curso AWS | Técnicas Essenciais 🙂
 
-## Arquivos disponibilizados 📚
+### 1 - Arquivos disponibilizados 📚
  
  - HeidiSQL_11.0_64_Portable.zip -> Client portable para acesso MYSQL
  - index.html -> Página HTML simples para teste do S3 como host
@@ -9,7 +9,7 @@
  - mineradora-ativos-frontend.zip -> frontend da aplicação final (em \build\static\js\main.14649292.chunk.js e \build\static\js\main.14649292.chunk.js.map trocar o IP e porta pelo em uso de fato)
  
  
-## Exercicio Final 👨‍🎓🤘
+## 2 -Exercicio Final 🎓🤘
 
 ## VPC:
 
