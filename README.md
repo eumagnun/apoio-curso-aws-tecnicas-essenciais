@@ -91,10 +91,7 @@ senha: Teste123*
 
 ####Video com execução do passo a passo:
 
-<!-- blank line -->
-<figure class="video_container">
-  <iframe src="https://www.youtube.com/embed/MPjn5D5bhO0" frameborder="0" allowfullscreen="true"> </iframe>
-</figure>
-<!-- blank line -->
+https://www.youtube.com/embed/MPjn5D5bhO0
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/MUQfKFzIOeU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![](http://img.youtube.com/vi/MPjn5D5bhO0/0.jpg)](http://www.youtube.com/watch?v=MPjn5D5bhO0 "Implantando aplicação multi camada aws")
+
