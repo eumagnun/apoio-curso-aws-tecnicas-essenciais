@@ -54,7 +54,7 @@ Criar bucket para hospedagem de site
 
 aplicar politica de liberação de acesso:
 
-
+```
 {
   "Version":"2012-10-17",
   "Statement":[
@@ -67,7 +67,7 @@ aplicar politica de liberação de acesso:
     }
   ]
 }
-
+```
 
 Implantar frontend da aplicação conform passos abaixo:
 
