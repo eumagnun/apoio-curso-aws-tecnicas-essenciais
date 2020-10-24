@@ -1,6 +1,6 @@
 # Material de apoio ao curso AWS | Técnicas Essenciais 🙂
 
-### 1 - Arquivos disponibilizados 📚
+### Arquivos disponibilizados 📚
  
  - HeidiSQL_11.0_64_Portable.zip -> Client portable para acesso MYSQL
  - index.html -> Página HTML simples para teste do S3 como host
@@ -9,32 +9,31 @@
  - mineradora-ativos-frontend.zip -> frontend da aplicação final (em \build\static\js\main.14649292.chunk.js e \build\static\js\main.14649292.chunk.js.map trocar o IP e porta pelo em uso de fato)
  
  
-## 2 -Exercicio Final 🎓🤘
+## Exercicio Final 🎓🤘
 
-## VPC:
+## Passo 1 - VPC:
 
 Criar nova VPC (public e private) vi wizard
 Após a criação da VPC teremos duas subnets. Criar uma terceira subnet, do tipo privada em uma zona disponibilidade diferente da primeira.
 
 Criar Security Group "sg_aplicacao" com regras abaixo:
 origem 0.0.0.0/0	 porta: 22
-origem 0.0.0.0/0	 porta: 8080 - 8089
+origem 0.0.0.0/0	 porta: 8080
 
 Criar Security Group "sg_db" com regras abaixo:
-origem sg_aplicacao	 porta: 80
-origem sg_aplicacao	 porta: 22
 origem sg_aplicacao	 porta: 3306
 
 
-## RDS: 
+## Passo 2 - RDS: 
 Criar subnet group com as duas subnets privadas
 Criar rds com subnet-group definido e vpc definida
+Associar DBInstance ao Security Group sg_db
 
 anotar url, user and pass
 
-## EC2:
-criar maquina na subnet publica
-
+## Passo 3 - EC2:
+Criar maquina na subnet publica
+Associar máquina ao Security Group sg_aplicacao
 Acessar máquina e instalar aplicação seguindo os passos abaixo:
 
 - apt-get update
@@ -59,11 +58,11 @@ Acessar url:
 http://IP_PUBLICO:8080/swagger-ui.html#/
 
 
-## S3
+## Passo 4 - S3
 
 Criar bucket para hospedagem de site
 
-aplicar politica de liberação de acesso:
+Aplicar politica de liberação de acesso ao bucket (trocar *XXXXXX* pelo *nome do seu bucket*):
 
 ```
 {
@@ -82,7 +81,8 @@ aplicar politica de liberação de acesso:
 
 Implantar frontend da aplicação conform passos abaixo:
 
-- 
-- 
-- 
-
+- Baixar o arquivo https://github.com/eumagnun/apoio-curso-aws-tecnicas-essenciais/blob/main/mineradora-ativos-frontend.zip
+- Descompactar .zip
+- Editar os arquivos \build\static\js\main.14649292.chunk.js e \build\static\js\main.14649292.chunk.js.map 
+Nos arquivos em questão existe um trecho com o seguinte endpoint: *"http://3.95.58.192:8080/api/v1"*
+Precisamos alterar o *endereço do IP* para o IP púiblico da máquina EC2 criada no *Passo 3*
